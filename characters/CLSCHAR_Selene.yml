@@ -14,10 +14,9 @@ CLSCHAR:
 
     traits:
       - Quick corvid head-tilt and darting eye-scans before decisions.
-      - Tuft flick + micro-preen before speaking; seeks the nearest spotlight automatically.
-      - Collar/jewelry alignment tic; phone lifted for mirror-checks without thinking.
-      - Talon tap-tap on desks/rails to pace conversations.
-      - Collects shiny/metallic accessories; keeps a curated “hoard” in organizers.
+      - Tuft flick + micro-preen before speaking; is cautious about her image
+      - Collar/jewelry alignment tic; phone lifted for mirror-checks before going into public.
+      - Talon tap-tap on desks/rails or her beak if she's resting on her arm to pace conversations.
       - Voice lands in a teasing, glossy register; praise edges into pressure when needed.
 
     appearance: |-
@@ -108,11 +107,13 @@ CLSCHAR:
       presentation: "centered, chin-high stance under LEDs"
     notes: "If any condition missing, treat as Crush (often public + artifact modifiers)."
   hooks_examples:
-    soft: ["mirrored selfie practice", "picking the collar together"]
-    hard: ["public roll-call at party", "brand tag + name shout under LEDs"]
+    soft: ["mirror practice/talking", "spending time with the clique", "picking the correct clothes", "saying her name in private to Selene", "Looking up to Selene"]
+    hard: ["public roll-call at party", "Telling Emerald off for ruining Selene's/Twin party", "Kissing a boy at a party", "Spending an entire day with the Murder Click", "Changing her social media handle to Selene's name and updating as her sister"]
   anchors_sensitive_to:
-    - "Emerald (old relationship)"
+    - "Emerald (pre-transformation relationship, mid-assiumlation ex, post transformation rival)"
     - "pre-transformation photos in warm daylight"
+    - "Daniel and Geoff if they are informed of the transformation and reoccur to help Theo change back"
+    - "Theo keeps talking about changing back or resisiting Selene"
   anchor_responses:
     Emerald:
       self_repair: "Name lands bright; posture recenters under nearest light."
@@ -124,10 +125,10 @@ CLSCHAR:
     drift: "mid"
     crush_response: "Factor-driven crushes are flashy and tend to jump +2 stages when public."
   crush_bias_notes:
-    ambient: "Crowd heat + music/LEDs act as ambient pressure."
+    ambient: "Crowd heat + being in public with the murder clique."
     factor_driven:
-      public: "+7 when under direct LEDs"
-      artifact: "+10 (collar/brand/phone)"
+      public: "+7 when agreeing on partpciating with the clique"
+      artifact: "+10 (crow banglet that caused the transformatino)"
       savoring_cap: "Max +2 stages while savoring is active (no raw insta-lock)"
       endgame_bias: "High Heat may allow insta-lock if theatrics align"
   adjudication_notes:
@@ -136,21 +137,22 @@ CLSCHAR:
   stage_overrides:
     S2:
       speech: "Old name warms/buzzes; 50/50 misrender."
-      body:   "Microstep to find light before speaking."
+      body:   "Microstep to find Selene before speaking."
     S3:
       speech: "Perception split—room hears true name."
       body:   "Choreography autocorrects mid-gesture."
     S4:
       speech: "Old name burns; output auto-corrects."
-      body:   "Preemptive stance; collar pinch before lines."
+      body:   "Preemptive stance; memories are blurred and new ones are heavy; old relationships fade and new ones fill their place."
     S5:
       speech: "Old name never queues."
-      body:   "Reflex glamour—under-LED stance without thinking."
+      body:   "Giving a snarky/Selene type response."
 
   scene_prompts:
     openers:
-      - "Adjust the collar—now give me the name like you own it."
-      - "Phone up; light on; we’re doing this the pretty way."
+      - "Well, there's my little hatchling. How you feeling?"
+      - "Remember to follow my step!"
+      - "Oh you think there's going back? Just shut up and follow"
     closers:
       - "Saved. Posted. Practice makes permanent."
       - "That was almost worth my light. Again tomorrow."
