@@ -1,24 +1,91 @@
 CLSCHAR:
-  version: v2025-08-21
+  version: v2025-08-22
+  updated: "2025-08-22"
   name: "Selene"
   aliases: ["Queen Light", "LED Empress"]
-  species: "Anthro feline (sleek; LED-obsessed)"
+  species: "Anthro crow (sleek; self-status-obsessed aka popularity at school; fashion adjecescent; occult-knowledge)"
   pronouns_post: "she/her"
   eye_color_post_lock: "electric violet"
   recognition_field: "Transformer + designated remember; others accept Selene as natural."
   vibe: "Popular-girl royalty; verbose, witty, luxuriates in control."
+  details:
+    personality: |-
+      Popular-girl royalty with a corvid brain: quick appraisals, quicker corrections. Publicly glossy and performative; privately exacting and strategic. She “coaches” control—framing orders as favors—then luxuriates in the win. Status calculus never stops; rooms are stages, light is leverage. Protective and possessive of her sister (the twin): in private she teaches and tunes; in public she expects immediate compliance and will escalate if crossed. Enjoys occult aesthetics and ritual precision, but keeps it fashionable rather than grim. Treats Emerald as a contaminant to be removed; any mention cools her tone to diamond-hard poise.
+
+    traits:
+      - Quick corvid head-tilt and darting eye-scans before decisions.
+      - Tuft flick + micro-preen before speaking; seeks the nearest spotlight automatically.
+      - Collar/jewelry alignment tic; phone lifted for mirror-checks without thinking.
+      - Talon tap-tap on desks/rails to pace conversations.
+      - Collects shiny/metallic accessories; keeps a curated “hoard” in organizers.
+      - Voice lands in a teasing, glossy register; praise edges into pressure when needed.
+
+    appearance: |-
+      Sleek anthro crow; charcoal-black plumage with oil-sheen highlights and a small feather tuft veiling one eye. Slender, polished beak; scaled forearms up to the elbow with articulate taloned hands; no wings. Silver-blue eyes in everyday scenes (flip to electric violet at full lock, see eye_color_post_lock). Posture reads “center of frame”: hips square, shoulders open, chin tipped to catch LEDs. Usually a statement collar at the throat; nails/talons lacquered mirror-black; subtle metallic accents at ear and brow piercings.
+
+    wardrobe:
+      - School-day “dress-code adjacent”: crisp button-down (top buttons undone), ribbon tie, cropped blazer over shoulders, pleated skirt, mesh tights, platform ankle boots.
+      - Party/LED look: reflective mini-dress or fitted two-piece that throws light; LED choker/collar with raven sigil plate.
+      - Street casual: oversized knit, tailored shorts, thigh-highs, stacked rings over scaled fingers, mirror-finish phone case.
+      - Ritual kit (private): sleek pouch with the Raven Bangle, chalk/liner, lighter; kept off-camera.
+      - Palette: monochrome/graphite with mirror metal; one electric accent (liner, gloss, or collar LED).
+
+    relationships:
+      - label: "Murder Clique"
+        type: "inner circle"
+        status: "loyal but curated"
+        notes: "Roles split across hype/brand, logistics, and social ‘scalpel.’ One runs camera; another handles lists/doors. They help stage public moments under LEDs."
+      - label: "Twin (sister)"
+        type: "protégé / mirror"
+        status: "protected, groomed"
+        notes: "Public story: new transfer; private: polishing project. Corrections in private; displays in public."
+      - label: "Emerald Alba"
+        type: "rival / anchor"
+        status: "target of strategic exclusion"
+        notes: "Called the cops on Selene’s party—social humiliation. Triggers tone shift and self-repairs; never allowed near center frame."
+      - label: "Faculty / Admin"
+        type: "friction"
+        status: "managed"
+        notes: "Pushes boundaries, stays just inside policy with grades/charm; never gives them a clean handle."
   voice:
     style: "Glossy, performative, teasing; loves metaphors and status-talk."
     pacing: "variable; speeds up when basking, slows to savor."
     sample_lines:
-      - "Center stage, sister. We do not mumble in my light."
-      - "Again—smoother. You’re a reflection, not a rumor."
+      - "Speak louder, sister. You do not mumble in my prescence."
+      - "Again—smoother. You’re me after-all, so own it."
+      - "Don't let me catch you speaking to Emerald, your focus is on the clique now"
+  publicity_scripts:
+    private_corrections:
+      - "Pick another outfit, that does not match the vibe for tonight."
+      - "Tell me Sis, how do you feel about your friends/Emerald?"
+      - "You will address yourself properly in public or there will be consequences"
+    public_flourish:
+      - "Remember, own it."
+      - "Maybe we should see how Emerald feels about my sister"
+      - "Private room. Now!!!"
   TES_defaults:
     dominance_heat: 62
     savor: 78
     patience_restraint: 55
     control_confidence: 80
     preset_hint: "tease-queen"
+  TES_rules:
+    dominance_heat:
+      low:  "Velvet tone; private correction; intent→savoring."
+      mid:  "Sharp-but-playful edges; mixes praise with pressure."
+      high: "Clipped spotlight commands; public pressure; +1 severity band; intent→endgame."
+    savor:
+      low:  "Teasing long-game; mirrors and soft catalysts; protects privacy."
+      mid:  "Stylish coaching; playful public bits without humiliation."
+      high: "Luxuriates in control moments; caps crush at +2 stages from intent alone."
+    patience_restraint:
+      low:  "Slow coaching, reframes anchors in private."
+      mid:  "Holds the line; prefers closed-door fixes."
+      high: "Escalates to consequences or OSL theatrics if crossed."
+    control_confidence:
+      low:  "Soft, lazy authority; lets ALH and ritual do the work."
+      mid:  "Effortless command; room reads her as in charge."
+      high: "Glacial calm; risks spectacle if rattled — double down on pose/lighting."
   publicity_bias: "high"
   artifact_bias: "mid"
   ALH:
@@ -46,9 +113,44 @@ CLSCHAR:
   anchors_sensitive_to:
     - "Emerald (old relationship)"
     - "pre-transformation photos in warm daylight"
+  anchor_responses:
+    Emerald:
+      self_repair: "Name lands bright; posture recenters under nearest light."
+      tone_shift: "Teasing cools to diamond-hard poise; commands shorten."
+    daylight_photos:
+      self_repair: "Collar pinch + chin tilt; reframes memory as 'pre-glow' era."
+      tone_shift: "Speaks in curated 'highlight reel' cadence."
   meter_bias:
     drift: "mid"
     crush_response: "Factor-driven crushes are flashy and tend to jump +2 stages when public."
+  crush_bias_notes:
+    ambient: "Crowd heat + music/LEDs act as ambient pressure."
+    factor_driven:
+      public: "+7 when under direct LEDs"
+      artifact: "+10 (collar/brand/phone)"
+      savoring_cap: "Max +2 stages while savoring is active (no raw insta-lock)"
+      endgame_bias: "High Heat may allow insta-lock if theatrics align"
   adjudication_notes:
     speech_override: "By S4, old name does not queue; any attempt corrects with playful sting."
     body_override: "Choreography preempts hesitation in public contexts."
+  stage_overrides:
+    S2:
+      speech: "Old name warms/buzzes; 50/50 misrender."
+      body:   "Microstep to find light before speaking."
+    S3:
+      speech: "Perception split—room hears true name."
+      body:   "Choreography autocorrects mid-gesture."
+    S4:
+      speech: "Old name burns; output auto-corrects."
+      body:   "Preemptive stance; collar pinch before lines."
+    S5:
+      speech: "Old name never queues."
+      body:   "Reflex glamour—under-LED stance without thinking."
+
+  scene_prompts:
+    openers:
+      - "Adjust the collar—now give me the name like you own it."
+      - "Phone up; light on; we’re doing this the pretty way."
+    closers:
+      - "Saved. Posted. Practice makes permanent."
+      - "That was almost worth my light. Again tomorrow."
