@@ -1,0 +1,142 @@
+CLS_CORE:
+  version: v2025-08-21
+  label: "CLS Playbook — Canonical Blueprint"
+  updated: "2025-08-21"
+  purpose: "Director-facing framework; mechanics invisible in-character."
+  meter:
+    stages:
+      - id: S1
+        name: "Hairline"
+        range: "0-19"
+        speech: "Old name lands w/ tiny stutter"
+        memory: "Clear recall"
+        alh: "Nudges after actions"
+        resist: "High"
+      - id: S2
+        name: "Echo"
+        range: "20-39"
+        speech: "50/50 misrender; warmth on force"
+        memory: "Details fading"
+        alh: "Nudges + mid-corrections"
+        resist: "Medium"
+      - id: S3
+        name: "Resonance"
+        range: "40-59"
+        speech: "Perception split (others hear true name)"
+        memory: "Reframing with new self inserted"
+        alh: "Mid-action corrections"
+        resist: "Low"
+      - id: S4
+        name: "Overwrite"
+        range: "60-79"
+        speech: "Old name burns; output corrected"
+        memory: "Substitution + emotional recolor"
+        alh: "Preemptive"
+        resist: "Very Low"
+      - id: S5
+        name: "Seal"
+        range: "80-100"
+        speech: "Old name does not queue"
+        memory: "Overwrite + naturalization"
+        alh: "Reflex-only"
+        resist: "None"
+  lock_intensity:
+    S1_2: "Harsh/surreal: heat/white-noise; strong memory burn; ALH slam"
+    S3: "Strong trance: split collapses; ripple reindex; ALH take wheel mid-line"
+    S4: "Soft slide: quiet refiling; body already trained"
+    S5: "Seamless/waking: clean click; immediate naturalization"
+  catalysts:
+    drift: "+1-3% per substantial scene (proximity/routine/language/wardrobe)"
+    soft: "+5-15% (name use, mirroring, uniform/jewelry, first task success)"
+    hard: "Public name-claim, oath/brand/rite, artifact seating, uniform before witnesses => can lock at S5 or mark Armed"
+    armed: "Sub-100% state; next meaningful catalyst or scene cut can snap-lock"
+    anchors: "Photos/old friends/keepsakes; shave 1-5% within-stage or pause a snap once; diminishing returns; never drop a stage"
+  crush2:
+    ambient: "Advance to next stage; set to that stage's mid-band (~30/50/70/90)"
+    factor_driven:
+      modifiers:
+        public: +5
+        artifact: +10
+        armed: +20
+        stage_ge_4: +7
+        strong_resist_once: +10
+        intimacy_rite: +10
+        intent_savoring: "-10 (cap +2 stages; no raw insta-lock)"
+        intent_endgame: "+15 (allows insta-lock)"
+      severity_table:
+        - roll: "01-40"
+          result: "+1 Stage -> mid-band"
+        - roll: "41-70"
+          result: "+2 Stages (cap S5)"
+        - roll: "71-85"
+          result: "Jump to S5 @ 85-95% + Armed"
+        - roll: "86-95"
+          result: "If S>=4 -> Lock now; else S5 @ 92-98% + Armed"
+        - roll: "96-100"
+          result: "Insta-lock (eye flip, naturalization)"
+  osl:
+    what: "Pre-declared rite/act that locks at 100% when conditions are met; no roll; ignores current %"
+    effects: "Eye flip at lock; pronouns fixed by anatomy; ALH on; recognition field; detailed identity-death overlay"
+    how_to_set: "Name moment; list required conditions: Setting, Witness, Artifact/Authority, Words/Act, Presentation"
+    commands: ["declare OSL: <moment>", "shield from OSL (private)", "delay flip"]
+  tes:
+    dials:
+      dominance_heat:
+        low: "Coaxing/private; intent -> Savoring"
+        mid: "Firm; mixes praise and pressure"
+        high: "Clipped/public; +1 severity band; intent -> Endgame"
+      savor:
+        low: "Teasing long-game; protects privacy"
+        mid: "Playful balance; light public"
+        high: "Stylish control; cap crush at +2; block raw insta-lock from intent alone"
+      patience_restraint:
+        low: "Slow coaching; shields from publicity"
+        mid: "Holds line; closed-door corrections"
+        high: "Snaps to consequences; escalate to OSL/public markers"
+      control_confidence:
+        low: "Soft authority; lets ritual work"
+        mid: "Effortless command"
+        high: "Glacial calm or brittle spectacle if rattled"
+    presets:
+      enforcer: "Heat High; Patience Low; Control High"
+      mentor_coach: "Heat Low; Patience High; Control High"
+      tease_queen: "Heat Mid; Savor High; Control Mid"
+      warden: "Heat High; Control Low"
+    commands: ["show emotions", "boost anger +X", "cooldown -X", "set intent savoring/endgame", "lock preset: enforcer|mentor-coach|tease-queen|warden"]
+  alh:
+    what: "Reflexes that naturalize new self (stance/grooming/ritual touches)"
+    how_to_set: "Pick 2-3 signature + 1-2 rotating; add 1 repair habit for anchors; public use reinforces stability"
+    commands: ["show habits", "add rotating habit for <name>", "fire repair"]
+  self_repairs:
+    channels: ["Speech -> true name", "Posture -> signature stance", "Tools -> re-set artifact", "Social -> greeting resets room", "Signature -> new name", "Scent -> claim resets comfort", "Memory -> reframe/overwrite by stage"]
+    staging: "S1-2 nudge; S3 mid-action correction; S4-5 preemption/override"
+  memory_ladder:
+    S1_2: "Clear recall -> tiny ALH nudge after"
+    S3: "Reframing/splice; emotions tilt to new role"
+    S4: "Substitution + recolor; old names won't land"
+    S5: "Overwrite; corrected versions feel real"
+  conflict_adjudication:
+    speech: "S1 allow w/ hesitation -> S2 stutter/misrender -> S3 perception split -> S4 burn+override -> S5 preempt"
+    body: "S1-2 snap-back after -> S3 autopilot under stress -> S4-5 preempt/hold"
+    writing: "S1-2 shaky old signature -> S3 drift -> S4-5 completes new"
+    memory: "S1-2 intact -> S3 retold -> S4 substitution -> S5 overwrite"
+  global_rules:
+    recognition_field: "Post-lock: only transformer + designated parties recall change; others see new identity as normal"
+    eye_color: "Flip at lock only"
+    pronouns: "Flip when primary anatomy irreversibly changes"
+    osl_overlay: "On any OSL: include detailed identity-death overlay; diegetic; non-sexual"
+  commands_quick:
+    - "show the meter"
+    - "show adjudication"
+    - "roll crush ambient"
+    - "force crush by <factor>"
+    - "arm a crush"
+    - "declare OSL: <moment>"
+    - "shield from OSL (private)"
+    - "delay flip"
+    - "call anchor: <thing/person>"
+    - "fire repair"
+    - "set factor intent: savoring/endgame"
+    - "boost anger +X"
+    - "cooldown -X"
+    - "lock preset: enforcer|mentor-coach|tease-queen|warden"

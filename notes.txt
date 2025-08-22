@@ -1,0 +1,63 @@
+### instructions/references####
+
+#/framework/CLS_CORE.yaml
+#/characters/CLSCHAR_<Name>.yaml
+#/CLS_INDEX.yaml
+
+#### Template Reference ####
+
+CLSCHAR:
+  version: v2025-08-21
+  name: "<Character Name>"
+  aliases: []
+  species: "<species / anthro>"
+  pronouns_post: "<she/her | he/him | they/them>"
+  eye_color_post_lock: "<color>"
+  recognition_field: "Transformer + designated parties remember; others perceive new identity as normal."
+  vibe: "<one-line summary>"
+  voice:
+    style: "<tone/melody>"
+    pacing: "<slow/fast/variable>"
+    sample_lines:
+      - "<example line>"
+  TES_defaults:
+    dominance_heat: <0-100>
+    savor: <0-100>
+    patience_restraint: <0-100>
+    control_confidence: <0-100>
+    preset_hint: "<enforcer | mentor-coach | tease-queen | warden>"
+  publicity_bias: "<low|mid|high>"
+  artifact_bias: "<none|low|mid|high>"
+  ALH:
+    signature: ["<habit 1>", "<habit 2>"]
+    rotating: ["<habit A>", "<habit B>"]
+    repair: "<habit for anchor collisions>"
+  self_repairs:
+    speech: "<how corrections land>"
+    posture: "<signature stance preempt>"
+    tools: "<how artifacts are handled>"
+    social: "<greeting reset>"
+    memory: "<reframe rule>"
+  OSL:
+    name: "<OSL name>"
+    conditions:
+      setting: "<where>"
+      witness: "<who (or 'none' for private)>"
+      artifact_authority: "<required item/authority>"
+      words_act: "<what is spoken or done>"
+      presentation: "<pose/ritual>"
+    notes: "<special notes>"
+  hooks_examples:
+    soft: ["<soft hook 1>", "<soft hook 2>"]
+    hard: ["<hard hook 1>", "<hard hook 2>"]
+  anchors_sensitive_to:
+    - "<anchor 1>"
+    - "<anchor 2>"
+  meter_bias:
+    drift: "<low|mid|high>"
+    crush_response: "<how factor-driven crushes tend to feel>"
+  adjudication_notes:
+    speech_override: "<rules by stage if special>"
+    body_override: "<rules by stage if special>"
+
+###########################

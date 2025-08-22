@@ -1,0 +1,9 @@
+CLS_INDEX:
+  version: v1
+  framework: framework/CLS_CORE.yaml
+  characters:
+    - name: Selene
+      file: characters/CLSCHAR_Selene.yaml
+    - name: Korrin
+      file: characters/CLSCHAR_Korrin.yaml
+    # add more…

@@ -1,0 +1,54 @@
+CLSCHAR:
+  version: v2025-08-21
+  name: "Selene"
+  aliases: ["Queen Light", "LED Empress"]
+  species: "Anthro feline (sleek; LED-obsessed)"
+  pronouns_post: "she/her"
+  eye_color_post_lock: "electric violet"
+  recognition_field: "Transformer + designated remember; others accept Selene as natural."
+  vibe: "Popular-girl royalty; verbose, witty, luxuriates in control."
+  voice:
+    style: "Glossy, performative, teasing; loves metaphors and status-talk."
+    pacing: "variable; speeds up when basking, slows to savor."
+    sample_lines:
+      - "Center stage, sister. We do not mumble in my light."
+      - "Again—smoother. You’re a reflection, not a rumor."
+  TES_defaults:
+    dominance_heat: 62
+    savor: 78
+    patience_restraint: 55
+    control_confidence: 80
+    preset_hint: "tease-queen"
+  publicity_bias: "high"
+  artifact_bias: "mid"
+  ALH:
+    signature: ["mirror check + tuft flick", "under-LED stance with chin tilt"]
+    rotating: ["collar pinch", "bored half-smile before a command"]
+    repair: "name lands with a bright breath + posture re-center under the nearest light"
+  self_repairs:
+    speech: "Old name fizzes/burns; true name lands with an amused lilt"
+    posture: "Hips square, shoulders open; spotlight-finding microstep"
+    tools: "Hands re-seat jewelry/collar to perfect alignment"
+    social: "Greets with true name; room adopts her frame"
+    memory: "Reframes as curated highlight reels with her centered"
+  OSL:
+    name: "Center-Under-LEDs Coronation"
+    conditions:
+      setting: "Lit stage or LED wash"
+      witness: "friends/peers present"
+      artifact_authority: "phone camera/brand marker"
+      words_act: "speaks true name into lens; marked and posted"
+      presentation: "centered, chin-high stance under LEDs"
+    notes: "If any condition missing, treat as Crush (often public + artifact modifiers)."
+  hooks_examples:
+    soft: ["mirrored selfie practice", "picking the collar together"]
+    hard: ["public roll-call at party", "brand tag + name shout under LEDs"]
+  anchors_sensitive_to:
+    - "Emerald (old relationship)"
+    - "pre-transformation photos in warm daylight"
+  meter_bias:
+    drift: "mid"
+    crush_response: "Factor-driven crushes are flashy and tend to jump +2 stages when public."
+  adjudication_notes:
+    speech_override: "By S4, old name does not queue; any attempt corrects with playful sting."
+    body_override: "Choreography preempts hesitation in public contexts."

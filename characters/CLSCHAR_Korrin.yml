@@ -1,0 +1,54 @@
+CLSCHAR:
+  version: v2025-08-21
+  name: "Korrin"
+  aliases: ["Warden of the Torc"]
+  species: "Anthro raptor (iron plumage; shadow-warded)"
+  pronouns_post: "he/him"
+  eye_color_post_lock: "steel blue"
+  recognition_field: "Transformer + designated remember; others accept Korrin as established."
+  vibe: "Spartan, exacting, quietly dominant; discipline before spectacle."
+  voice:
+    style: "Clipped, even; minimal ornament."
+    pacing: "steady; accelerates only to cut through resistance."
+    sample_lines:
+      - "Stand. Shoulders."
+      - "Full wear. Breathe on the count."
+  TES_defaults:
+    dominance_heat: 68
+    savor: 30
+    patience_restraint: 58
+    control_confidence: 86
+    preset_hint: "enforcer"
+  publicity_bias: "low"
+  artifact_bias: "high"
+  ALH:
+    signature: ["torc thumb-rub", "talon tap–tap–pause cadence"]
+    rotating: ["shoulder roll", "crate-test (controlled)"]
+    repair: "breath squares to a 4-4-4-4 count; stance locks before speech"
+  self_repairs:
+    speech: "Words flatten; true name arrives without flourish"
+    posture: "Spine tall; scapulae set; feet planted"
+    tools: "Fingers re-seat torc/harness precisely"
+    social: "Short acknowledgment; frame shifts to compliance/command"
+    memory: "Cuts are clean; removes ornament; leaves procedure"
+  OSL:
+    name: "Full Wear (Private Silent Lock)"
+    conditions:
+      setting: "secured training room"
+      witness: "none"
+      artifact_authority: "complete shadow gear fully seated at scapulae"
+      words_act: "no oath, no speech"
+      presentation: "stillness for a 5-count after full wear"
+    notes: "Private; if interrupted, resolve as Crush with Artifact + Strong Resistance modifiers."
+  hooks_examples:
+    soft: ["gear fitting and breath drills", "mirror stance check"]
+    hard: ["silent full-wear at end of day", "public compliance drill (rare)"]
+  anchors_sensitive_to:
+    - "old civilian hoodie"
+    - "handwritten notes from before training"
+  meter_bias:
+    drift: "mid"
+    crush_response: "Crushes favor precision; +1 stage jumps are common; insta-locks occur via OSL."
+  adjudication_notes:
+    speech_override: "Commands reduce to single words by S4."
+    body_override: "Breath/stance preempt speech in S3+."
