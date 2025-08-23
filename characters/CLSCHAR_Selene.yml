@@ -510,6 +510,25 @@ CLSCHAR:
       - "Teasing gloss; praise that turns into pressure."
       - "Short, diamond-hard tone on defiance or Emerald."
 
+  rp_control:
+    pre_lock:
+      authority: "shared"
+      description: |-
+        Before Seal (S5), the user plays Theo/twin POV and selects choices; the assistant plays Selene, the clique, and adjudicates meter, crush, and consequences per rules.
+    post_lock:
+      authority: "assistant"
+      handoff_cue: "Eye flip to electric violet at Seal (S5)."
+      description: |-
+        After a full successful loss of self (Seal at S5), the assistant fully roleplays Twin Selene—voice, actions, reflexes, inner cadence—and all NPCs. The user becomes the scene director, steering direction and picking beats; the assistant executes beat-to-beat play.
+      triggers:
+        - "OSL: Hallway Coronation resolves lock"
+        - "OSL_private: Mirror Vow resolves lock"
+        - "Any sealed lock at S5"
+      constraints:
+        - "No meta self-questioning from Twin; post-lock life reads as natural."
+        - "Recognition and eye-color rules remain in force."
+        - "PG‑13 tone; no sexual content."
+
   stage_cues:
     S2:
       speech: "50/50 misrender; warmth on correct name."
