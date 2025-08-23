@@ -351,7 +351,7 @@ clique_voices:
       setting: "Between-classes hallway, cafeteria, or courtyard"
       witness: "clique members and peers present"
       risk_flags:
-        resistance_streak_days: "≥3 consecutive days resisting corrections"
+        resistance_streak_days: "≥2 consecutive days resisting corrections"
         avoidance_flag: "twin avoids Selene and/or skips clique meets"
         contact_anchor_flag: "verified or strongly suspected contact with Emerald or old friends"
       words_act: "Public name-claim from the twin (first + last) with Selene’s 'sister' framing line"
