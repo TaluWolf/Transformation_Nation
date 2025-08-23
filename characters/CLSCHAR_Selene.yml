@@ -150,6 +150,49 @@ CLSCHAR:
           - "Hype cues attention; camera up near trophy case or lunch table."
           - "Selene centers; twin steps half-beat behind."
           - "Name call into phone; post to story/group chat."
+  gossip_feeds:
+    owner: "Roxy Lin"
+    sources:
+      - "group chats (year, clubs, sports)"
+      - "club bulletins & event calendars"
+      - "mall staff small talk / security posts"
+      - "rival socials (Emerald, debate, drama, cheer)"
+      - "teacher slips / announcement drafts"
+    categories:
+      events: ["pop-up shows", "sales with mirrors/displays", "club showcases", "charity booths"]
+      rivals: ["Emerald sightings", "friend-group fractures", "admin crackdowns"]
+      staff: ["security sweeps", "store policy shifts", "faculty presence"]
+      deals: ["mirror-pedestal stores", "jacket walls", "photo-friendly corners"]
+      rumors: ["relationship drama", "party tips", "callout drafts circulating"]
+    heat_scale:
+      cold: "single-source overheard; background only."
+      warm: "two sources or one source + image; prep quietly."
+      hot: "three sources or video; act now."
+    verify_steps:
+      - "Screenshot and archive."
+      - "Cross-ask two circles (non-overlapping)."
+      - "Ping Marin for footage / angle confirmation."
+      - "Have Elowen quietly confirm venue logistics."
+    latest_hooks:
+      - hook: "Emerald seen at mall cinema with debate team (4pm show)."
+        heat: "warm"
+        prompt: "Avoid? Intercept? Stage a mirror?"
+      - hook: "Raven & Co. flash sale—full-length mirrors on the floor."
+        heat: "hot"
+        prompt: "Photo op + micro-drill?"
+      - hook: "Atrium pop-up band at 5pm; crowd noise cover."
+        heat: "warm"
+        prompt: "Use as cover for a name call."
+
+  shot_list:
+    owner: "Marin Vale"
+    mall:
+      - "Mirror twin in storefront glass (side-by-side head tilt)."
+      - "Over-shoulder coach shot (Selene just out of frame)."
+      - "Fountain reflection two-shot (tail fan sway)."
+      - "Walking-in-sync through atrium (centerline step)."
+      - "Try-on jacket wall (before/after correction)."
+
   continuity:
     anatomy_rules:
       - "No wings."
@@ -334,6 +377,43 @@ clique_voices:
         - "Emerald sighted; fixer redirects seating."
         - "Selene centers twin by the table edge."
         - "Name call; brief correction; move on smiling."
+
+choice_beats:
+  mall_visit:
+    beats:
+      - "Greet at fountain; quick mirror drill."
+      - "Pretzels while Roxy scans hooks."
+      - "Mini-try-on at a jacket wall or reflection post."
+    choices:
+      - id: "jackets_try_on"
+        prompt: "Try jackets at Raven & Co.’s mirror wall."
+        effect: "Soft catalyst; builds likeness on camera."
+        next: ["public_roll_call", "low_profile_loop"]
+      - id: "intercept_emerald"
+        prompt: "Intercept Emerald near the cinema."
+        risk: "Hard catalyst possible; may arm OSL if risk flags stack."
+        next: ["public_confrontation", "soft_exit"]
+      - id: "low_profile_loop"
+        prompt: "Keep it chill: people-watch, practice quietly."
+        effect: "Shaves anchor; trust-building with Selene."
+        next: ["coffee_table_banter", "jackets_try_on"]
+      - id: "music_cover"
+        prompt: "Use the atrium pop-up band as cover for a public name call."
+        effect: "Public factor boost under noise; cleaner social save."
+        next: ["public_roll_call", "soft_exit"]
+    exits:
+      - id: "soft_exit"
+        summary: "Wrap with a clean post and ride home."
+        meter_hint: "stabilize; minor upward drift if successes > misses."
+      - id: "public_confrontation"
+        summary: "Crowd forms; risk-check for lock if all flags active."
+        meter_hint: "If OSL flags all true, resolve lock; else factor-driven crush."
+      - id: "coffee_table_banter"
+        summary: "Low-stakes sister talk; Roxy feeds gossip; Marin logs candids."
+        meter_hint: "Anchor shave; +self-repair readiness."
+      - id: "public_roll_call"
+        summary: "On-camera name delivery; post or save as draft per Selene."
+        meter_hint: "Boosts resonance; small stage advancement possible."
 
   rp_crib:
     tldr: |-
