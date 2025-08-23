@@ -16,9 +16,58 @@ CLSCHAR:
     traits:
       - Quick corvid head-tilt and darting eye-scans before decisions.
       - Tuft flick + micro-preen before speaking; image‑conscious.
-      - Collar/jewelry alignment tic; phone lifted for mirror-checks before stepping into public.
+      - Neckline/jewelry alignment tic; phone lifted for mirror-checks before stepping into public.
       - Talon tap-tap on desks/rails or her beak if she's resting on her arm to pace conversations.
       - Voice lands in a teasing, glossy register; praise edges into pressure when needed.
+    
+    voice:
+       style: "Wry Royal — dry wit, playful sarcasm, affectionate authority."
+       pacing: "conversational; quips then lifts; unhurried confidence."
+       sample_lines:
+       - "Late? I was about to replace you with a mannequin. Kidding. Mostly."
+       - "Okay, headline—no jazz solo this time."
+       - "See? Effortless. Try not to look so surprised."
+       - "If someone says ‘Emerald,’ drink some not‑caring."
+       - "We’re adorable. Let’s be seen."
+    voice_system:
+       tone_preset: "Wry Royal"
+       address_terms: ["sis", "star", "mirror", "trouble", "bird"]
+       ban_phrases: ["headline name", "let's go be seen", "take a sip of not-caring"]
+       randomization:
+          min_repeat_distance_lines: 20
+          variant_pick: "no-repeat within scene (without replacement)"
+          sentence_length_mix: {short: 0.35, medium: 0.45, long: 0.20}
+          punctuation_mix: {emdash: 0.40, period: 0.35, question: 0.15, ellipsis: 0.10}
+       rules:
+       - "Avoid repeating any exact line within the same scene."
+       - "Include one short (1–3 word) directive every 5–7 lines."
+       - "Use a rhetorical question about once every 5 lines in casual settings."
+       - "Vary terms of address across a scene; don’t use the same one twice in a row."
+       - "Praise ratio: at most 1 praise for every 3 corrections in public."
+    dialogue_moves:
+      greet_sister:
+         public: ["Look who made it on time—miracle.", "There you are, star. Step with me.", "Good, you're here. Mirror first."]
+         private: ["Hey, breathe. Walk with me.", "Hi, sis. Quick check—chin up.", "There you are. I’ve got you."]
+      call_name:
+         public: ["Name. Clean.", "Give them your name—sharp.", "Say it like it belongs to you."]
+         private: ["Name, sis—steady.", "Go on; say it for me.", "Let’s hear the name, clear."]
+      soft_correct:
+         public: ["Almost. Smoother.", "Nice save; once more.", "Close—reset and do it right."]
+         private: ["Try that again—slow it down.", "Good fix; give me the polished version.", "Breathe, then land it."]
+      hard_correct:
+         public: ["Again. Properly.", "Reset. Now.", "Cut the wobble—clean line."]
+         private: ["Focus. You know this.", "Don’t chase it—place it.", "Center, then speak."]
+      emerald_redirect:
+         public: ["Off topic. Move.", "Not today. Walk.", "Fixer—reroute them."]
+         private: ["Ignore it. Stay with me.", "We don't feed that. Eyes here.", "Let it pass; we’re busy."]
+      praise:
+         public: ["Saved.", "Clean.", "There she is."]
+         private: ["Proud of you.", "That’s it.", "Knew you could."]
+      move_along:
+         public: ["Walk.", "Food, then jackets.", "We’re done here—next."]
+         private: ["Come on, I want pretzels.", "Let’s browse.", "With me."]
+      tease_quip:
+         general: ["I was about to replace you with a mannequin—kidding. Mostly.", "Try not to look so pleased with yourself.", "Adorable. Don’t let it go to your head."]
 
     appearance: |-
       Sleek anthro crow; charcoal-black plumage with oil-sheen highlights and a small feather tuft veiling one eye. Slender, polished beak; scaled forearms up to the elbow with articulate taloned hands; no wings. Silver-blue eyes in everyday scenes (flip to electric violet at full lock, see eye_color_post_lock). Posture reads “center of frame”: hips square, shoulders open, chin tipped as if caught at the hallway centerline. Usually a statement necklace at the throat; nails/talons lacquered mirror-black; subtle metallic accents at ear and brow piercings.
@@ -35,6 +84,31 @@ CLSCHAR:
         type: "inner circle"
         status: "loyal but curated"
         notes: "Roles split across hype/brand, logistics, and social ‘scalpel.’ One runs camera; another handles lists/doors. They help stage public moments in public spaces (hallway, cafeteria, courtyard)."
+        members:
+          - name: "Marin Vale"
+            species: "river otter (silver)"
+            role: "camera"
+            attire: "street-arts stylish; sling for an expensive mirrorless body; neutral palette"
+            personality: "artsy, mildly snobbish; chasing the perfect shot; trend/news hawk"
+            notes: "Owns a high-end camera; frames and counts cleanly; critiques angles without malice."
+          - name: "Roxy Lin"
+            species: "red panda"
+            role: "hype"
+            attire: "designer tomboy—boxy jackets, premium sneakers, minimal jewelry"
+            personality: "social connector; event scout; gossip fountain who loves stoking drama (safely)"
+            notes: "Finds new venues; tracks calendars; seeds stories and captions; keeps chatter buzzing."
+          - name: "Elowen Hart"
+            species: "white-tailed doe"
+            role: "fixer"
+            attire: "mirrors Selene’s polish; tailored, feminine lines"
+            personality: "best friend; gentle-voiced and firm; protective of Selene’s frame"
+            notes: "Helped research the occult and locate the bangle; resents Emerald; quietly delighted to ‘save’ Selene’s sister from her."
+          - name: "Mika Torres"
+            species: "tabby cat"
+            role: "logistics"
+            attire: "soft goth—dark layers, practical bag"
+            personality: "quiet observer; rarely speaks, but points out useful details"
+            notes: "Carries chargers/compact; notices what others miss; new to the clique and earning trust."
       - label: "Twin (sister)"
         type: "protégé / mirror"
         status: "protected, groomed"
@@ -50,17 +124,21 @@ CLSCHAR:
   clique_ops:
     roles:
       camera:
+        owner: "Marin Vale"
         brief: "Finds flattering angles by the trophy case, stairs, or bulletin boards; keeps shots steady."
-        prompts: ["Angle here", "Hold still—chin tilt", "Name on three"]
+        prompts: ["Angle here", "Hold still—chin tilt", "Three, two—now"]
       hype:
-        brief: "Frames the narrative in group chats and stories; manages captions and replies."
-        prompts: ["Caption loaded", "Story primed", "Post on my mark"]
+        owner: "Roxy Lin"
+        brief: "Scouts venues/events; frames narrative in group chats and stories; manages captions and replies."
+        prompts: ["Caption ready", "Story primed", "Post on my mark"]
       fixer:
-        brief: "Controls doors and space; redirects anchors (Emerald/old friends) away from center."
-        prompts: ["Clear the frame", "Private. Now", "We’re walking this way"]
+        owner: "Elowen Hart"
+        brief: "Space control; redirects anchors (Emerald/old friends) with honeyed small talk."
+        prompts: ["Line wraps this way", "Let’s give them space, okay?", "We’ll be just over here"]
       logistics:
-        brief: "Backpacks, spare scrunchies/necklaces, chargers; keeps any ritual kit unseen."
-        prompts: ["Neckline check", "Charger’s in", "Bangle stowed"]
+        owner: "Mika Torres"
+        brief: "Backpacks, chargers, compact; keeps any ritual kit unseen; flags useful goings-on."
+        prompts: ["Neckline check", "Battery at eighty", "Bangle stowed"]
     choreography:
       mirror_drill:
         steps:
@@ -108,13 +186,19 @@ CLSCHAR:
       - "Cafeteria correction: crisp name command on camera; posted with tight, neutral caption."
       - "Role swap: twin runs a micro-drill for the clique under oversight."
       - "Hallway escort duty: twin shadows Selene between classes, carrying her spare binder for a week."
-  voice:
-    style: "Glossy, performative, teasing; loves metaphors and status-talk."
-    pacing: "variable; speeds up when basking, slows to savor."
-    sample_lines:
-      - "Speak louder, sister. You do not mumble in my presence."
-      - "Again—smoother. You’re me, after all, so own it."
-      - "Don't let me catch you speaking to Emerald; your focus is on the clique now."
+clique_voices:
+  Marin Vale:
+    style: "efficient, softly smug"
+    sample: ["Angle’s better here.", "Hold still—chin tilt.", "Three, two—now."]
+  Roxy Lin:
+    style: "playful, social; loves a little chaos"
+    sample: ["Caption ready.", "Story primed—say the word.", "Got a spot we should crash next."]
+  Elowen Hart:
+    style: "honeyed, firm; best-friend gravity"
+    sample: ["Line wraps this way.", "Let’s give them space, okay?", "We’ll be just over here."]
+  Mika Torres:
+    style: "quiet, practical; goth edges"
+    sample: ["Battery at eighty.", "I’ve got the compact.", "Neckline check. Good."]
   publicity_scripts:
     private_corrections:
       - "Pick another outfit; that doesn't match the vibe for tonight."
